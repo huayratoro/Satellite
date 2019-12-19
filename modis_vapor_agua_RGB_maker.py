@@ -1,3 +1,7 @@
+#### SCRIPT PARA HACER GRAFICOS CON TB Y UN RGB ####
+#### VALE SOLO CON CANALES EMISIVOS, NO REFLECTANTES ####
+#### POWERED BY HUAYRATORO ####
+
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
@@ -28,10 +32,10 @@ countries = cfeature.NaturalEarthFeature(
         scale='10m',
         facecolor='none',edgecolor='magenta')
 
-salida='/home/marcos/Documentos/TESIS/Resultados/caso_de_estudio/modis/'
+salida='.../caso_de_estudio/modis/'
 
 ######################## LEYENDO LOS DATOS #########################
-DataPath = '/home/marcos/Documentos/TESIS/Resultados/caso_de_estudio/modis/datos/'
+DataPath = '.../modis/datos/'	## TIENE QUE SER LA RUTA AL MYD021KM...
 Extension = 'hdf'
 Filelist = glob.glob(DataPath+"*"+Extension)
 file_name = Filelist[0]
@@ -62,7 +66,8 @@ for key, value in sds_obj.attributes().items():
         radiance_offsets = value  
     if key == 'radiance_scales':
         radiance_scales = value
-
+#### AQUI SE EXTRAEN LAS BANDAS QUE UNO QUIERA USAR ####
+#### PARA MAS INFORMACION VISITAR https://modis.gsfc.nasa.gov/about/specifications.php ####
 # CANAL 
 n = 6 # 6.9
 B1 = radiance_scales[n] * ( DN[n,:,:] - radiance_offsets[n] )
@@ -83,7 +88,7 @@ B4 = B4*1e6 # Units: Watts/m^2/m/steradian
 
 ################### GEOREFERENCIACION ##############################
 
-DataPath = '/home/marcos/Documentos/TESIS/Resultados/caso_de_estudio/modis/geoloc/'
+DataPath = '.../modis/geoloc/' # RUTA A LA GEOREFERENCIACION MYD03...
 Extension = 'hdf'
 Filelist = glob.glob(DataPath+"*"+Extension)
 file_name = Filelist[0]
@@ -102,7 +107,8 @@ sds_obj = file.select('Longitude') # # selecciona el SDS
 LON = sds_obj.get() # extrae los datos del SDS
 
 ########################## TRANF TBRILLO ###########################
-
+## AQUI SE TRANSFORMAN LAS RADIANZAS A TEMPERATURA DE BRILLO CON S-B
+## SI SE TRABAJA CON REFLECTANCIAS PONER si_no = 'NO'
 si_no='yes'
 
 # Estas constantes son las mismas para todo los canales emisivos
@@ -150,8 +156,9 @@ lonwest = -75
 loneast = -60
 latsouth = -20
 latnorth = -30
-
+####################### PARA HACER EL RGB ########################## 
 ####################################################################
+## EN ESTE CASO, ES UNA RECETA PARA DETECTAR ONDAS DE MONTANIA
 rC08=TB1
 minVal = -29.25 
 maxVal = 0
@@ -237,11 +244,11 @@ lat_formatter = LatitudeFormatter()
 ax1.xaxis.set_major_formatter(lon_formatter)
 ax1.yaxis.set_major_formatter(lat_formatter)
 
-plt.savefig(salida+'RGB_modis_sep_2012_18.png', dpi=250, bbox_inches='tight')
+plt.savefig(salida+'RGB_modis.png', dpi=250, bbox_inches='tight')
 plt.close('all')
 
+########### AQUI SE GRAFICA UNA BANDA SOLA A ELECCION ##############
 ####################################################################
-
 
 vmin = -60
 vmax = 25
