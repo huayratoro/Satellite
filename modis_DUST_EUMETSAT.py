@@ -1,3 +1,6 @@
+#### SCRIPT PARA HACER RGB DE POLVO DEL EUMETSAT ####
+#### POWERED BY HUAYRATORO ####
+
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
