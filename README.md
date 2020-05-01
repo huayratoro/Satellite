@@ -6,5 +6,5 @@ https://ladsweb.modaps.eosdis.nasa.gov/search/
 Hay q hacerse una cuenta y de ahi se bajan XD
 Recordar bajar los datos y la georeferenciacion !!!!!
 
-### Para bajar datos de GOES-16 utilizar el script aqui 
-presente (solo una banda !!)
+### Para bajar datos de GOES-16 
+utilizar el script aqui presente (solo una banda !!)
