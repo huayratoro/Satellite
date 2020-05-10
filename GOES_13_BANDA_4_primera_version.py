@@ -2,6 +2,8 @@
 ### LOS DATOS SE PUEDEN CONSEGUIR DE :
 ### https://www.avl.class.noaa.gov/saa/products/search?sub_id=0&datatype_family=GVAR_IMG&submit.x=13&submit.y=9
 ### SE NECESITA UNA SUBSCRIPCION
+### Para la barra de colores del GOES 16 usada aqui:
+### https://geonetcast.wordpress.com/2017/06/02/geonetclass-manipulating-goes-16-data-with-python-part-v/
 ### POWERED BY HUAYRATORO
 
 from netCDF4 import Dataset
