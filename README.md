@@ -15,3 +15,6 @@ https://geonetcast.wordpress.com/2017/06/02/geonetclass-manipulating-goes-16-dat
 ### Para bajar datos de GOES-13 hacia atras 
 https://www.avl.class.noaa.gov/saa/products/search?sub_id=0&datatype_family=GVAR_IMG&submit.x=13&submit.y=9
 (se necesita un previo registro)
+
+### Para bajar los datos de nivel 1 y 2 de TRMM y GPM de forma libre :
+http://atmos.tamucc.edu/trmm/data/ 
