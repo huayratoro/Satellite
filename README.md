@@ -18,3 +18,14 @@ https://www.avl.class.noaa.gov/saa/products/search?sub_id=0&datatype_family=GVAR
 
 ### Para bajar los datos de nivel 1 y 2 de TRMM y GPM de forma libre :
 http://atmos.tamucc.edu/trmm/data/ 
+
+### Sino se pueden bajar desde la pagina del STORM:
+https://storm.pps.eosdis.nasa.gov/storm/ (previo registro de correo electronico)
+
+### También de la página de la universidad de Washington (registro de mail):
+
+# TRMM >> http://trmm.atmos.washington.edu/ 
+# GPM >> http://gpm.atmos.washington.edu/
+
+
+
