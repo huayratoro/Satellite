@@ -28,6 +28,9 @@ Los datos nivel 3 ya son climatologías.
 ### Sino se pueden bajar desde la pagina del STORM:
 https://storm.pps.eosdis.nasa.gov/storm/ (previo registro de correo electronico)
 
+### Con el GESDISK
+https://disc2.gesdisc.eosdis.nasa.gov/data/ (se requiere un registro con correo y clave). Aqui estan los .png con las pasadas de cada producto. Guarda que los dias estan ordenados en juliano !!
+
 ### También de la página de la universidad de Washington (registro de mail):
 TRMM >> http://trmm.atmos.washington.edu/ 
 GPM >> http://gpm.atmos.washington.edu/
