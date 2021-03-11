@@ -40,4 +40,6 @@ https://www.ngdc.noaa.gov/mgg/global/
 
 O bien desde el ERA5 (no pesa mucho y es de 0.25° de resolución)
 
+### Barras de colores de PyART
 
+https://github.com/jjhelmus/pyart_colormaps_and_limits/blob/master/plot_all_colormaps.py
